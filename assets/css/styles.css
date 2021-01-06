@@ -1,0 +1,337 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+:root {
+  --lightRed: #fa5652;
+  --darkGreen: #327675;
+  --grey: #4b4f51;
+  --pink: #fff8f8;
+  --darkPink: #fee6e5;
+}
+
+/*===
+  general styles
+  ===*/
+
+/*fonts*/
+@font-face {
+  font-family: "Gelion";
+  src: url("../fonts/Gelion-Regular.ttf");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Red Hat Display", sans-serif;
+  text-transform: capitalize;
+}
+p,
+span,
+a {
+  font-family: "Gelion";
+  text-transform: capitalize;
+}
+h2 {
+  color: var(--darkGreen);
+  font-size: 38px;
+  padding: 10px 0 20px 0;
+  font-weight: bolder;
+}
+h3 {
+  color: var(--lightRed);
+  font-size: 22px;
+}
+h5 {
+  color: var(--darkGreen);
+}
+p {
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 0.2px;
+}
+
+/*directions*/
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.container-fluid {
+  width: 90%;
+  margin: 0 auto;
+}
+.section-padding {
+  padding: 30px 0;
+}
+.section-cap {
+  width: 55%;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.img-fluid {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.logo{
+  width: 80%;
+}
+a{
+  color: var(--darkGreen);
+  display: block;
+  padding: 0 15px;
+  text-decoration: none;
+}
+button{
+  cursor: pointer;
+}
+/*===
+  btn
+  ===*/
+.btn-red {
+  background-color: var(--lightRed);
+  box-shadow: 0px 8px 87px rgba(0, 0, 0, 0.1);
+  border-radius: 65px;
+  padding: 20px 50px;
+  color: #fff;
+  font-size: 18px;
+  border: unset;
+  font-weight: bold;
+}
+.btn-pink {
+  background-color: var(--darkPink);
+  box-shadow: 0px 8px 87px rgba(0, 0, 0, 0.1);
+  border-radius: 65px;
+  padding: 18px 40px;
+  color: var(--lightRed);
+  font-size: 15px;
+  border: unset;
+  font-weight: 600;
+}
+/**/
+.covid-bg {
+  position: relative;
+}
+.covid-bg::before {
+  position: absolute;
+  right: -152px;
+  top: 10%;
+  content: "";
+  width: 145px;
+  height: 300px;
+  background-image: url("../imgs/pinkCovid.png");
+  background-size: cover;
+}
+.covid-bg-light-image:before {
+  top: 50%;
+  background-image: url("../imgs/ss.png");
+}
+/*===
+  navbar
+  ===*/
+.nav-hero-wrapper{
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0) -29.64%,
+    #fff8f8 45.66%,
+    #b574740d 45.66%
+  );
+}
+nav{
+  padding:20px 0;
+  justify-content: space-between;
+}
+nav .btn-pink{
+  background: unset;
+  border:2px solid var(--lightRed);
+  padding:8px 30px;
+  font-size: 14px;
+}
+.nav-links a{
+  position: relative;
+  transition: all .2s;
+}
+.nav-links a:hover{
+  color:var(--lightRed);
+}
+.nav-links a:hover::before{
+  position:absolute;
+  content:"";
+  bottom:-10px;
+  left:45%;
+  width:5px;
+  height:5px;
+  border-radius: 50%;
+  background-color: var(--lightRed);
+}
+/*===
+  hero section
+  ===*/
+.hero {
+  height: 100vh;
+}
+.hero-img {
+  width: 60%;
+}
+.hero-cap {
+  margin-left: 10%;
+  margin-top: 100px;
+  width: 40%;
+}
+.hero-cap h1 {
+  font-size: 40px;
+  color: var(--darkGreen);
+}
+.hero-cap p {
+  font-size: 20px;
+  margin: 30px 0;
+}
+/*===
+  about covid
+  ===*/
+.about-covid {
+  justify-content: space-between;
+}
+.about-covid-img {
+  width: 50%;
+}
+.about-covid-cap {
+  width: 40%;
+}
+.about-covid-cap button {
+  margin-top: 30px;
+}
+
+/*===
+  Contagion
+  ===*/
+.contagion-wrapper .covid-bg::before {
+  left: -145px;
+  right: unset;
+  top: 40%;
+}
+.contagion-card {
+  box-shadow: 0px 35px 87px rgba(0, 0, 0, 0.11);
+  border-radius: 10px;
+  padding: 40px 20px;
+  margin: auto;
+  text-align: center;
+  margin: 10px;
+  height: 460px;
+  width: 460px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  transition: all 0.3s;
+  border-bottom: 5px solid #fff;
+}
+.contagion-card:hover {
+  border-bottom: 5px solid var(--lightRed);
+}
+.contagion-img {
+  height: 200px;
+}
+.contagion-card h4 {
+  font-size: 22px;
+  color: var(--darkGreen);
+  padding: 20px 0 10px 0;
+}
+
+/*===
+  Symptomps
+  ===*/
+.symptomps-img {
+  width: 90%;
+  margin: auto;
+}
+/*===
+  advices
+  ===*/
+.advices-wrapper {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.advices-cap {
+  width: 50%;
+}
+.advices-img {
+  width: 40%;
+}
+.advices-cap {
+  align-items: flex-start;
+}
+.advices-cap-number {
+  margin: 10px 20px;
+  background-color: var(--darkPink);
+  border-radius: 50%;
+  padding: 10px 12px;
+}
+.advices-cap-number h3 {
+  font-size: 30px;
+}
+.first-advice {
+  position: relative;
+}
+.first-advice::before {
+  position: absolute;
+  left: -152px;
+  top: 60%;
+  content: "";
+  width: 145px;
+  height: 300px;
+  background-image: url("../imgs/darkGreenCovid.png");
+  background-size: cover;
+}
+/*===
+  contact
+  ===*/
+.contact-footer {
+  background: linear-gradient(
+    360deg,
+    rgba(255, 241, 241, 0.5) 0%,
+    rgba(255, 241, 241, 0) 108.69%
+  );
+  margin: auto;
+  text-align: center;
+}
+
+.contact-wrapper {
+  width: 40%;
+}
+.contact form {
+  padding: 10px 20px;
+  background: #ffffff;
+  box-shadow: 0px 8px 80px rgba(0, 0, 0, 0.06);
+  border-radius: 57px;
+  justify-content: space-between;
+}
+.contact input {
+  border: unset;
+  font-size: 15px;
+}
+.contact::before {
+  right: 0;
+}
+/*===
+  footer
+  ===*/
+.copy-rights {
+  padding-top: 30px;
+}
+.footer-wrapper {
+  justify-content: space-between;
+}
+.footer-navs a {
+  font-size: 20px;
+}
